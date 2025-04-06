@@ -11,7 +11,7 @@ let shader;
 let cubeVAO;
 let rotationAngle=0;
 let Sun, Earth, Moon;
-let axes = new Axes(gl, 0.8); 
+let axes = new Axes(gl, 1.0); 
 let lastTime = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
