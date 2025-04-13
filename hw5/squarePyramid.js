@@ -31,7 +31,7 @@ export class SquarePyramid {
             -0.5, 0, -0.5,   0.5, 0, -0.5,   0.5, 0, 0.5,  -0.5,0, 0.5
         ]);
 
-        let a=Math.sqrt(5)
+        let a=1/Math.sqrt(5)
 
         this.normals = new Float32Array([
             // front face 
