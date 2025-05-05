@@ -158,9 +158,9 @@ export class Cone {
                     this.vertexNormals[i * 3 + 2] = this.vertexNormals[5]= z / len;
                 }
                 else{
-                    const x = (this.normals[i * 3 + 0]+this.normals[(i+3) * 3 + 0])/2;
-                    const y = (this.normals[i * 3 + 1]+this.normals[(i+3) * 3 + 1])/2;
-                    const z = (this.normals[i * 3 + 2]+this.normals[(i+3) * 3 + 2])/2;
+                    const x = (this.normals[i * 3 + 0]+this.normals[(i+2) * 3 + 0])/2;
+                    const y = (this.normals[i * 3 + 1]+this.normals[(i+2) * 3 + 1])/2;
+                    const z = (this.normals[i * 3 + 2]+this.normals[(i+2) * 3 + 2])/2;
     
                     const len = Math.sqrt(x * x + y * y + z * z);
     
