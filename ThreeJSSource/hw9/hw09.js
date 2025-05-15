@@ -192,7 +192,7 @@ function animate() {
             planet.mesh.rotation.y += planet.rotationSpeed;
             
             // 공전
-            planet.orbitAngle -= planet.orbitSpeed*2*Math.PI;
+            planet.orbitAngle -= planet.orbitSpeed*Math.PI;
             planet.mesh.position.x = planet.distance * Math.cos(planet.orbitAngle);
             planet.mesh.position.z = planet.distance * Math.sin(planet.orbitAngle);
         }
