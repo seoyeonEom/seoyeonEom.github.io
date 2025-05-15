@@ -113,8 +113,8 @@ const planets = {
 
 // Camera 컨트롤
 const cameraControls = {
-    perspective: "Perspective",
-    switchCamera: function() {
+    'Current Camera': "Perspective",
+    'Switch Camera Type': function() {
         if (camera instanceof THREE.PerspectiveCamera) {
             scene.remove(camera);
             camera = null; // 기존의 camera 제거    
@@ -129,7 +129,7 @@ const cameraControls = {
             orbitControls = null;
             orbitControls = new OrbitControls(camera, renderer.domElement);
             orbitControls.enableDamping = true;
-            this.perspective = "Orthographic";
+            this['Current Camera'] = "Orthographic";
         } else {
             scene.remove(camera);
             camera = null; 
@@ -142,7 +142,7 @@ const cameraControls = {
             orbitControls = null;
             orbitControls = new OrbitControls(camera, renderer.domElement);
             orbitControls.enableDamping = true;
-            this.perspective = "Perspective";
+            this['Current Camera'] = "Perspective";
         }
         orbitControls.object = camera;
     }
@@ -150,8 +150,8 @@ const cameraControls = {
 
 // Camera 폴더 추가
 const cameraFolder = gui.addFolder('Camera');
-cameraFolder.add(cameraControls, 'switchCamera');
-cameraFolder.add(cameraControls, 'perspective').listen();
+cameraFolder.add(cameraControls, 'Switch Camera Type');
+cameraFolder.add(cameraControls, 'Current Camera').listen();
 cameraFolder.open();
 
 // 행성별 폴더 생성
